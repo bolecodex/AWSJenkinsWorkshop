@@ -3,9 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - sudo apt update
       - sudo apt install software-properties-common -y
       - sudo add-apt-repository ppa:deadsnakes/ppa
+      - sudo apt update
       - sudo apt install -y python3.9
       - sudo apt-get install -y python3-pip
   pre_build:
