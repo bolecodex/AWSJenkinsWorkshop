@@ -4,24 +4,24 @@ phases:
   install:
     commands:
       - lsb_release -a
-      # Install dependencies for building Python from source
-      - sudo apt-get update -y
-      - sudo apt-get install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev -y
+#       # Install dependencies for building Python from source
+#       - sudo apt-get update -y
+#       - sudo apt-get install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev -y
 
-      # Download and install Python 3.9 from source
-      - wget https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tgz
-      - tar -xf Python-3.9.12.tgz
-      - cd Python-3.9.12
-      - ./configure --enable-optimizations
-      - sudo make altinstall
+#       # Download and install Python 3.9 from source
+#       - wget https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tgz
+#       - tar -xf Python-3.9.12.tgz
+#       - cd Python-3.9.12
+#       - ./configure --enable-optimizations
+#       - sudo make altinstall
 
-      # Set Python 3.9 as the default version
-      - sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.9 1
-      - sudo update-alternatives --config python3
-      - sudo apt-get install ca-certificates -y
+#       # Set Python 3.9 as the default version
+#       - sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.9 1
+#       - sudo update-alternatives --config python3
+#       - sudo apt-get install ca-certificates -y
 #       - sudo apt-get update -y
 #       - sudo apt-get install -y python3.9
-      - sudo apt-get install -y python3-pip
+#       - sudo apt-get install -y python3-pip
 #       - wget https://bootstrap.pypa.io/get-pip.py
 #       - sudo python3 get-pip.py
   pre_build:
