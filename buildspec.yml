@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - lsb_release -a
       - sudo apt install software-properties-common -y
       - sudo add-apt-repository ppa:deadsnakes/ppa
       - sudo apt-get update -y
