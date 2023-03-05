@@ -3,8 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-        - python -m ensurepip --upgrade
-        - pip3 install Flask
+        - wget https://bootstrap.pypa.io/get-pip.py
+        - python get-pip.py
+        - pip install Flask
   build:
     commands:
       - echo Build started on `date`
