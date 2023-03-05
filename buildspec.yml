@@ -6,7 +6,7 @@ phases:
       - sudo apt update
       - sudo apt install software-properties-common -y
       - sudo add-apt-repository ppa:deadsnakes/ppa
-      - sudo apt install -y python3.10
+      - sudo apt install -y python3.9
   pre_build:
     commands:
       - python3 --version
