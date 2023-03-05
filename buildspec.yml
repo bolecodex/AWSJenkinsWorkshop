@@ -4,6 +4,8 @@ phases:
   install:
     commands:
       - sudo apt install -y python3
+  pre_build:
+    commands:
       - pip3 install Flask
   build:
     commands:
