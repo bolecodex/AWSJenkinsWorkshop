@@ -21,9 +21,9 @@ phases:
       - sudo apt-get install ca-certificates -y
 #       - sudo apt-get update -y
 #       - sudo apt-get install -y python3.9
-#       - sudo apt-get install -y python3-pip
-      - wget https://bootstrap.pypa.io/get-pip.py
-      - sudo python3 get-pip.py
+      - sudo apt-get install -y python3-pip
+#       - wget https://bootstrap.pypa.io/get-pip.py
+#       - sudo python3 get-pip.py
   pre_build:
     commands:
       - python3 --version
@@ -33,7 +33,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - python test_app.py
+      - python3 test_app.py
   post_build:
     commands:
       - echo Build completed on `date`
